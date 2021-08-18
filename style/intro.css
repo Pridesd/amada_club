@@ -1,0 +1,51 @@
+@keyframes intro{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 9.5rem;
+    margin-bottom: 5.5rem; */
+    animation-name: intro;
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    padding-top: 9.5rem;
+}
+
+.intro span{
+    line-height: 4rem;
+    color: beige;
+    text-shadow: 0 0 2px black;
+}
+
+.intro__slogan{
+    font-size: 40px;
+}
+
+.intro__name{
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.intro__name2{
+    padding-bottom: 1.5rem;
+}
+.intro__img img{
+    /* transition: opacity 1s ease-in-out;
+    opacity: 1; */
+    transition: all ease-in-out 1s;
+}
+.intro__img img:hover{
+    opacity: 0.1;
+    /* opacity: 0; */
+    
+}

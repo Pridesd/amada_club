@@ -1,0 +1,29 @@
+.main_photo{
+    width: 100%;
+}
+
+.intro_amada{
+    margin: 3rem 3rem;
+    margin-bottom: 6rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.intro_amada_text{
+    display: flex;
+    flex-direction: column;
+    padding: 0 4rem;
+}
+.intro_amada_text span:first-child{
+    font-size: 4rem;
+    font-weight: 600;
+}
+.intro_amada_text span:last-child{
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 1.4rem;
+}
+
+.intro_amada_img{
+    width: 20%;
+    border-radius: 50%;
+}
