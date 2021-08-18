@@ -27,13 +27,14 @@ footer>div{
     position: fixed;
     left: 0;
     right: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 0.5px solid rgba(236, 236, 236, 0.5);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 2rem;
-    padding: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 4rem;
     padding-bottom: 0.3rem;
+    transition: all 0.2s ease-in-out;
 }
 
 .header__icon a{
@@ -53,4 +54,8 @@ footer>div{
 
 .header__navbar a:hover{
     text-decoration: underline;
+}
+
+.change_color {
+    background-color: rgb(236, 236, 236);
 }

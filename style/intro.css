@@ -1,9 +1,18 @@
-@keyframes intro{
+@keyframes fade_in{
     0%{
         opacity: 0;
     }
     100%{
         opacity: 1;
+    }
+}
+
+@keyframes fade_out{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
     }
 }
 
@@ -14,7 +23,7 @@
     align-items: center;
     /* margin-top: 9.5rem;
     margin-bottom: 5.5rem; */
-    animation-name: intro;
+    animation-name: fade_in;
     animation-delay: 0.5s;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
