@@ -37,9 +37,9 @@
 jQuery(window).scroll(function() {    
     var scroll = jQuery(window).scrollTop();
     if (scroll >= 100) {       
-        jQuery(".header").addClass("change_color");
+        jQuery(".header").addClass("change_background-color");
     } else
     {
-        jQuery(".header").removeClass("change_color");
+        jQuery(".header").removeClass("change_background-color");
     }
 }); 

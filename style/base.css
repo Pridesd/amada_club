@@ -32,13 +32,14 @@
     text-decoration: underline;
 }
 
-.change_color {
-    background-color: rgba(236, 236, 236,0.6);
+.change_background-color {
+    background-color: rgba(236, 236, 236,0.7);
 }
 
-.change_color a{
+.change_color{
     color: black;
 }
+
 
 .main_photo{
     width: 100%;
