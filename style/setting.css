@@ -2,6 +2,7 @@ html,body{
     box-sizing: border-box;
     margin: 0;
     font-family: 'Quicksand', sans-serif;
+    word-break: keep-all;
 }
 html{
     position: relative;
@@ -27,11 +28,15 @@ a{
     
 .title{
     font-size: 3.5rem;
-    font-weight: 600;
+    font-weight: 400;
+    margin-top: 2rem;
     padding-bottom: 1rem;
 }
 
+.korean{
+    font-family: 'Gowun Dodum', sans-serif;
+}
 .subtitle{
     padding-bottom: 1rem;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }

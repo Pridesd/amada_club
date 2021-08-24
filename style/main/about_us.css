@@ -1,3 +1,80 @@
 .main_about_us{
     background-image: url("비샬.jpg");
 }
+
+.my_info{
+    border-top: 1px solid rgba(0, 0, 0, 0.3 );
+    margin-top: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3 );
+}
+
+.my_info_intro{
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.my_info__content{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.my_info__content_carrier{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.my_info__content_carrier span{
+    line-height: 3.5rem;
+    font-size: 1.2rem;
+}
+
+.my_info__img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.my_info__img img{
+    border-radius: 3rem;
+    margin-bottom: 1rem;
+}
+
+.my_info__img span{
+    font-size: 1.3rem;
+}
+
+.my_info__link{
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+.my_info__link a{
+    padding: 0 1rem;
+}
+
+.amada_member{
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.amada_member__sector{
+    width: 41%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    line-height: 2.3rem;
+}
+.amada_member__sector:first-child{
+    border-right:1px solid rgba(0, 0, 0, 0.3);
+}
