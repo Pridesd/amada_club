@@ -59,6 +59,7 @@ footer{
     font-size: 1rem;
     color: rgb(24, 24, 32);
     border-top:1px solid rgb(20, 20, 20, 0.8);
+    background-color: rgb(243, 243, 243)
 }
 
 footer>div{
@@ -66,4 +67,24 @@ footer>div{
     padding: 1rem 1.5rem;
     flex-direction: column;
     line-height: 1.5rem;
+}
+
+.footer__base span:first-child{
+    font-size: 2.3rem;
+    margin: 1.2rem 0;
+}
+
+.footer__contact__sns{
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer__contact__sns a{
+    padding: 0 0.3rem;
+    transition: all ease-in-out 0.3s;
+}
+
+.footer__contact__sns a:hover{
+    opacity: 0.3;
 }
