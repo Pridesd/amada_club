@@ -1,37 +1,6 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style/img/아마다.png" rel="shortcut icon" type="image/x-icon">
-    <title>Amada</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link href="setting.js">
-    <script src="https://kit.fontawesome.com/2eb21cad7a.js" crossorigin="anonymous">
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-</head>
-<body>
-    <header class="header">
-        <div class="header__icon">
-            <a href="home.html">
-                <img src="/style/img/아마다.png" width="60px">
-                <span>Amada Club</span>
-            </a>
-        </div>
-        <div class="header__navbar">
-            <a class="header__navbar__color" href="home.html">HOME</a>
-            <a class="header__navbar__color" href="about_us.html">ABOUT US</a>
-            <a class="header__navbar__color" href="hiking.html">HIKING</a>
-            <a class="header__navbar__color" href="environment.html">ENVIRONMENT</a>
-            <!-- <a class="header__navbar__color" href="contact.html">CONTACT</a> -->
-        </div>
-    </header>
+{% extends 'base.html'%}
     <!-- 컨텐츠 화면 -->
-
+    {%block content%}
     <div class="main_photo main_about_us">
     </div>
     <main class="main_contents">
@@ -78,30 +47,4 @@
         </div>
         <span class="korean" data-aos="fade-up">도움을 주신 모든 분들 진심으로 감사드립니다.</span>
     </main>
-    <!-- 컨텐츠 화면 종료 -->
-    <footer class="footer">
-        <div class="footer__base">
-            <span>AMADA CLUB</span> 
-            <span class="korean">아마다블람 산악회</span>
-            <span>based in Geumho</span>
-        </div>
-        <div class="footer__contact">
-            <div class="footer__contact__sns">
-                <a href="http://www.facebook.com/jojaetrip2"><i class="fab fa-facebook-f"></i></a>
-                <a href="http://www.instagram.com/amada_club"><i class="fab fa-instagram"></i></a>
-                <a href="http://pf.kakao.com/_ZxdzDs"><i class="far fa-comment"></i></a>
-            </div>
-            <span>E-mail: whwotjr98@naver.com</span>
-            <span>Instagram: @pride_sd</span>
-        </div>
-    </footer>
-    <script>
-        AOS.init({
-            easing: 'ease-out-back',
-            duration: 1000
-        });
-     
-    </script>
-</body>
-<script src="script.js"></script>
-</html>
+    {%endblock%}
