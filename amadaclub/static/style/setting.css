@@ -1,0 +1,48 @@
+html,body{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    word-break: keep-all;
+}
+html{
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.text_body{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom:1px solid rgba(0, 0, 0, 0.4) ;
+    margin: 0rem 1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 1.4rem;
+}
+    
+.title{
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.korean{
+    font-family: 'Gowun Dodum', sans-serif;
+}
+.subtitle{
+    padding-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.underline{
+    padding: 0;
+    margin: 1.6rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
