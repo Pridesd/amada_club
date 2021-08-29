@@ -5,10 +5,11 @@
         </div>
         <main class="main_contents">
             <div class="title">Community</div>
-            <form action="{%url 'co_create'%}" method="POST" >
+            <form action="{%url 'co_create'%}" method="POST" enctype ="multipart/form-data">
                 {%csrf_token%}
                 <input type="text" name="title" placeholder="제목을 입력하세요">
-                <textarea name="content" id="" cols="30" rows="10">내용을 입력하세요</textarea>
+                <textarea name="content" id="" cols="30" rows="10" placeholder="내용을 입력하세요"></textarea>
+                <input type="file" name="image" placeholder="사진을 추가하세요">
                 <input type="submit" value="제출하기">
             </form>
             <div></div>

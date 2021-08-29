@@ -19,6 +19,10 @@ def co_create(request):
     new_post.title = request.POST['title']
     new_post.content = request.POST['content']
     new_post.date = timezone.now()
+    if (request.FILES.get('image') is not None) :
+        new_post.image = request.FILES['image']
+    else:
+        return render(request, 'co_new.html')
     new_post.save()
 
     return redirect('co_detail', new_post.id)
@@ -32,6 +36,8 @@ def co_update(request, id):
     update_post.title = request.POST['title']
     update_post.content = request.POST['content']
     update_post.date = timezone.now()
+    if (request.FILES.get('image') is not None) :
+        update_post.image = request.FILES['image']
     update_post.save()
 
     return redirect('co_detail', update_post.id)

@@ -23,4 +23,4 @@ urlpatterns = [
     path('', include('info.urls')),
     path('hiking/', include('hiking.urls')),
     path('community/', include('community.urls'))
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

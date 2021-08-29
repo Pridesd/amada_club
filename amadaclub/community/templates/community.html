@@ -5,6 +5,7 @@
         </div>
         <main class="main_contents">
             <div class="title">Community</div>
+            <div class="subtitle korean">산행정보를 공유하세요!</div>
             <a href="{% url 'co_new' %}">게시글 작성</a><br>
             {% for post in post_list %}
                 <h2><a href="{% url 'co_detail' post.id %}">{{post.title}}</a></h2>
