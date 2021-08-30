@@ -6,11 +6,19 @@
         <main class="main_contents">
             <div class="title">Community</div>
             {% if post %}
-                <h1>{{post.title}}</h2>
-                <p>{{post.content}}</p>
-                <p>{{post.date}}</p>
-                <a href="{% url 'co_edit' post.id %}">수정</a>
-                <a href="{% url 'co_delete' post.id%}">삭제</a>
+                <h1 class="korean">{{post.title}}</h2>
+                <div class="detail_option korean">
+                    <a class="detail_option__home" href="{% url 'community' %}"><i class="fas fa-home"></i></a>
+                    <div class="detail_option__modify">
+                        <a href="{% url 'co_edit' post.id %}">수정</a>
+                        <a href="{% url 'co_ask' post.id%}">삭제</a>
+                    </div>
+                </div>
+                <div class="detail_content korean">
+                    <span>{{post.content}}</span> 
+                    <img src="{{post.image.url}}" width="200px">
+                </div>
+                <p class="detail_date korean">작성 일시: {{post.date|date:'Y. m. d'}}</p>
             {% endif %}
             <div></div>
         </main>

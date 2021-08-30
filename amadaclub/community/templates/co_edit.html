@@ -4,13 +4,15 @@
         <div class="main_photo main_envirment">
         </div>
         <main class="main_contents">
-            <div class="title">Community</div>
-            <form action="{%url 'co_update' post.id%}" method="POST" enctype ="multipart/form-data">
+            <div class="title korean">게시글 수정</div>
+            <form class="post_form" action="{%url 'co_update' post.id%}" method="POST" enctype ="multipart/form-data">
                 {%csrf_token%}
-                <input type="text" name="title" value="{{post.title}}">
-                <textarea name="content" id="" cols="30" rows="10">{{post.content}}</textarea>
-                <input type="file" name="image" value="{{post.image}}" placeholder="사진을 추가하세요">
-                <input type="submit" value="수정하기">
+                <span class="post_form__title korean">제목: <input type="text" name="title" value="{{post.title}}"></span>
+                <span class="post_form__content korean">내용: <textarea name="content">{{post.content}}</textarea></span>
+                <div class="post_form__image-submit korean">
+                    <span class="post_form__image korean">이미지 첨부: <input type="file" name="image" placeholder="사진을 추가하세요"></span>
+                    <input class="post_form__submit korean" type="submit" value="제출하기">
+                </div>
             </form>
             <div></div>
         </main>

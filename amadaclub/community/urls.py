@@ -10,4 +10,5 @@ urlpatterns = [
     path('edit/<str:id>', co_edit, name="co_edit"),
     path('update/<str:id>', co_update, name = "co_update"),
     path('delete/<str:id>', co_delete, name = "co_delete"),
+    path('ask/<str:id>', co_ask, name="co_ask"),
 ]

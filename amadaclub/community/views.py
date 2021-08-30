@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render, get_object_or_404
 from django.http import request
 from django.utils import timezone
 from .models import Community
+from django.contrib import messages
 
 def community(request):
     post_list = Community.objects.all().order_by('-id')
@@ -22,6 +23,7 @@ def co_create(request):
     if (request.FILES.get('image') is not None) :
         new_post.image = request.FILES['image']
     else:
+        messages.error(request, '%사진을 첨부하세요.%')
         return render(request, 'co_new.html')
     new_post.save()
 
@@ -46,4 +48,7 @@ def co_delete(request, id):
     delete_post = Community.objects.get(id = id)
     delete_post.delete()
     return redirect('community')
-# Create your views here.
+
+def co_ask(request, id):
+    delete_post = Community.objects.get(id = id)
+    return render(request, 'co_ask.html', {'post':delete_post})

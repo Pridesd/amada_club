@@ -55,10 +55,63 @@
 .intro__img img{
     /* transition: opacity 1s ease-in-out;
     opacity: 1; */
+    width: 225px;
     transition: all ease-in-out 1s;
 }
 .intro__img img:hover{
     opacity: 0.1;
     /* opacity: 0; */
     
+}
+
+@media screen and (max-width: 768px) {
+    /* 모바일에 사용될 스트일 시트를 여기에 작성합니다. */
+    .intro_body{
+        background-image: url('../img/히말라야 전경.JPG');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .intro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* margin-top: 9.5rem;
+        margin-bottom: 5.5rem; */
+        animation-name: fade_in;
+        animation-delay: 0.5s;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        padding-top: 5.5rem;
+    }
+    
+    .intro span{
+        line-height: 2rem;
+        color: beige;
+        text-shadow: 0 0 2px black;
+    }
+    
+    .intro__slogan{
+        font-size: 20px;
+    }
+    
+    .intro__name{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    
+    .intro__name2{
+        padding-bottom: 1.5rem;
+    }
+    .intro__img img{
+        /* transition: opacity 1s ease-in-out;
+        opacity: 1; */
+        width: 125px;
+        transition: all ease-in-out 1s;
+    }
+    .intro__img img:hover{
+        opacity: 0.1;
+        /* opacity: 0; */
+        
+    }
 }
