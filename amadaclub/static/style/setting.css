@@ -40,9 +40,55 @@ a{
     padding-bottom: 1rem;
     font-size: 2rem;
 }
+.mobile_subtitle{
+    padding-bottom: 1rem;
+    font-size: 2rem;    
+}
 
 .underline{
     padding: 0;
     margin: 1.6rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+    .text_body{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-bottom:1px solid rgba(0, 0, 0, 0.4) ;
+        margin: 0rem 1rem;
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+        font-family: 'Gowun Dodum', sans-serif;
+        font-size: 1rem;
+    }
+        
+    .title{
+        font-size: 2rem;
+        font-weight: 400;
+        margin-top: 1rem;
+        padding-bottom: 0.5rem;
+    }
+    
+    .korean{
+        font-family: 'Gowun Dodum', sans-serif;
+    }
+    .subtitle{
+        padding-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+    
+    .underline{
+        padding: 0;
+        margin: 1rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    }
+    
+    .mobile_subtitle{
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
 }

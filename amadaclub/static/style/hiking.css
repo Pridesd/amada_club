@@ -55,3 +55,67 @@
     font-size: 2rem;
     color: white;
 }
+
+@media screen and (max-width: 768px) {
+    .main_hiking{
+        background-image: url("../img/mobile/한라산.jpg");
+    }
+    
+    .hiking_info{
+        width: 90%;
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    
+    .hiking_article{
+        margin-top: 1rem;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 2rem;
+    }
+    
+    
+    .hiking_news{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30rem;
+        background-color: salmon;
+        font-size: 2rem;
+        color: white;
+    }
+    
+    .hiking_weather{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30rem;
+        background-color: darkolivegreen;
+        font-size: 2rem;
+        color: white;
+    }
+    
+    
+    .hiking_memory{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30rem;
+        background-color: goldenrod;
+        font-size: 2rem;
+        color: white;
+    }
+    
+    
+}
