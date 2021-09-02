@@ -17,8 +17,11 @@
             <div class="hiking_article">
                 <span class="subtitle underline korean">산악 기상</span>
                 <div class="hiking_weather korean">
-                    <span><i class="far fa-sad-cry"></i></span>
-                    준비중입니다ㅜ
+                    {%for weather in weather_result%}
+                        {{weather}}
+                    {%endfor%}
+                    <!-- <span><i class="far fa-sad-cry"></i></span>
+                    준비중입니다ㅜ -->
                 </div>
             </div>
         </div>
