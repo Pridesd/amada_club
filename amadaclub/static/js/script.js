@@ -43,3 +43,33 @@ jQuery(window).scroll(function() {
         jQuery(".header").removeClass("change_background-color");
     }
 }); 
+
+// function addressKindChange(e) {
+//     var seoul = ["강남", "홍대", "영등포", "여의도"];
+//     var sejong = [];
+//     var busan = [];
+//     var daegu = [];
+//     var kwangju = [];
+//     var incheon = [];
+//     var daejeon = [];
+//     var ulsan = [];
+//     var gyeonggi = ["수원", "평택", "용인"];
+//     var gangwon = [];
+//     var chungcheongnam = ["천안", "세종", "논산"];
+//     var chungcheongbuk = [];
+//     var 
+//     var target = document.getElementById("addressKindD");
+
+//     if(e.value == "a") var d = seoul;
+//     else if(e.value == "b") var d = gyeonggi;
+//     else if(e.value == "c") var d = chungcheongnam;
+
+//     target.options.length = 0;
+
+//     for (x in d) {
+//         var opt = document.createElement("option");
+//         opt.value = d[x];
+//         opt.innerHTML = d[x];
+//         target.appendChild(opt);
+//     }   
+// }

@@ -1,22 +1,24 @@
 import requests
 import xmltodict
-from pathlib import Path
-import os
-import environ
 from amadaclub.settings import *
 import time
+import datetime
+import json
+
 
 def mountain_weather(location):
     keyValue = env('MOUTAIN_API_KEY')
     loca = str(location)
     now = time.strftime('%Y%m%d%H')
+    if datetime.datetime.now().second > 40:
+        now += '30'
     # now_time = str(now.tm_year)+str(now.tm_mon)+str(now.tm_mday)+str(now.tm_hour)+str(now.tm_min)+str(now.tm_sec)
     url = "http://know.nifos.go.kr/openapi/mtweather/mountListSearch.do?keyValue="+keyValue+"&version=1.0&localArea=01&tm="+now
     req = requests.get(url).content
-    xmlObject = xmltodict.parse(req)
-    allData = xmlObject
-    print(allData)
-    return allData
+    xmlObject = xmltodict.parse(req) #XML형태
+    xmlObject_json = json.dumps(xmlObject) #json 형태
+    allData = json.loads(xmlObject_json) #dict 형태
+    return allData['metadata']['outputData']['items']
 
 # 지역
 #     공백 : 전체
@@ -40,6 +42,7 @@ def mountain_weather(location):
 
 #지점번호
 # 전체	공백
+
 # 서울특별시	홍릉수목원임외	1910
 # 서울특별시	홍릉수목원임내	1911
 # 서울특별시	서울 천장산	1912
@@ -49,14 +52,29 @@ def mountain_weather(location):
 # 서울특별시	서울 구룡산	1916
 # 서울특별시	서울 관악산	1917
 # 서울특별시	서울 수락산	1918
+
+
+
 # 세종특별자치시	세종 관불산	4910
 # 세종특별자치시	세종 칠불산	4911
+
+
+
 # 부산광역시	부산 양달산	8914
 # 부산광역시	부산 백양산	8915
+
+
+
 # 대전광역시	대전 계족산	4912
 # 대전광역시	대전 보문산	4913
+
+
+
 # 울산광역시	울산 능동산	8900
 # 울산광역시	울주 백운산	8912
+
+
+
 # 경기도	파주 팔일봉	1890
 # 경기도	양평 금왕산	1891
 # 경기도	양평 어비산	1892
@@ -81,6 +99,9 @@ def mountain_weather(location):
 # 경기도	용인 바래기산	1948
 # 경기도	여주 마감산	1949
 # 경기도	가평 봉미산	2047
+
+
+
 # 강원도	화천 성불령 용화산	2000
 # 강원도	춘천 연엽산	2001
 # 강원도	철원 흑운토령	2002
@@ -190,6 +211,9 @@ def mountain_weather(location):
 # 강원도	삼척 헬기장	2915
 # 강원도	삼척 검봉산	2916
 # 강원도	삼척 중봉산	2917
+
+
+
 # 충청남도	금산 성주산	4890
 # 충청남도	부여 축융봉	4891
 # 충청남도	공주 무성산	4892
@@ -209,6 +233,9 @@ def mountain_weather(location):
 # 충청남도	천안 개죽산	4906
 # 충청남도	천안 몽각산	4907
 # 충청남도	공주 천태산	4908
+
+
+
 # 충청북도	괴산 구석산	3022
 # 충청북도	음성 개미산	3023
 # 충청북도	충주 장병산	3024
@@ -244,6 +271,9 @@ def mountain_weather(location):
 # 충청북도	옥천 금적산	3916
 # 충청북도	보은 삼승산	3917
 # 충청북도	보은 노성산	3918
+
+
+
 # 전라남도	순천 수이봉	6000
 # 전라남도	고흥 두방산	6001
 # 전라남도	화순 고비산	6002
@@ -281,6 +311,9 @@ def mountain_weather(location):
 # 전라남도	보성 초암산	6917
 # 전라남도	보성 천봉산	6918
 # 전라남도	광양 백운산(노랭이봉)	6919
+
+
+
 # 전라북도	무주 청량산	5890
 # 전라북도	진안 고산	5891
 # 전라북도	순창 추령봉	5899
@@ -304,6 +337,9 @@ def mountain_weather(location):
 # 전라북도	순창 여분산	5917
 # 전라북도	순창 추월산	5918
 # 전라북도	고창 방장산(솔재)	5919
+
+
+
 # 경상남도	거제 북병산	8000
 # 경상남도	통영 도덕산	8001
 # 경상남도	거창 기백산	8002
@@ -339,6 +375,9 @@ def mountain_weather(location):
 # 경상남도	진주 월아산	8916
 # 경상남도	창원 평지산	8917
 # 경상남도	함양 삼봉산	8918
+
+
+
 # 경상북도	봉화 묘봉	7000
 # 경상북도	봉화 미림산	7001
 # 경상북도	봉화 가부재	7002
@@ -400,6 +439,9 @@ def mountain_weather(location):
 # 경상북도	울진 백병산	7917
 # 경상북도	영주 용암산(한천시험림)	7918
 # 경상북도	영주 천부산	7919
+
+
+
 # 제주도	제주 노로오름	9910
 # 제주도	제주 사려니숲	9911
 # 제주도	서귀포시험림	9912

@@ -17,9 +17,37 @@
             <div class="hiking_article">
                 <span class="subtitle underline korean">산악 기상</span>
                 <div class="hiking_weather korean">
-                    {%for weather in weather_result%}
-                        {{weather}}
+                    <!-- <label for="location">지역 선택</label>
+                    <select name="location" id="">
+                        <option>지역을 선택해주세요</option>
+                        <option value="01">서울특별시</option>
+                        <option value="02">세종특별자치시</option>
+                        <option value="03">부산광역시</option>
+                        <option value="04">대구광역시</option>
+                        <option value="05">광주광역시</option>
+                        <option value="06">인천광역시</option>
+                        <option value="07">대전광역시</option>
+                        <option value="08">울산광역시</option>
+                        <option value="09">경기도</option>
+                        <option value="10">강원도</option>
+                        <option value="11">충청남도</option>
+                        <option value="12">충청북도</option>
+                        <option value="13">전라남도</option>
+                        <option value="14">전라북도</option>
+                        <option value="15">경상남도</option>
+                        <option value="16">경상북도</option>
+                        <option value="17">제주도</option>
+                    </select>
+                    <label for="mountains">산 선택</label>
+                    <select name="mountains" id="">
+                        <option>산을 선택해주세요</option>
+                    </select> -->
+                    {%for key, value in temp.items %}
+                        {%if key == '서울 수락산'%}
+                            <h2>{{key}}기온: {{value}}</h2>
+                        {%endif%}
                     {%endfor%}
+
                     <!-- <span><i class="far fa-sad-cry"></i></span>
                     준비중입니다ㅜ -->
                 </div>
