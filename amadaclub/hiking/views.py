@@ -3,7 +3,7 @@ from django.http import request
 from .crawling import *
 
 def hiking(request):
-    weather = mountain_weather(1)
+    weather = mountain_weather()
     temp = {}
     wind = {}
     humanity = {}
@@ -13,7 +13,8 @@ def hiking(request):
         humanity[weather[number]["obsname"]] = weather[number]['hm2m'] #습도
         wind[weather[number]["obsname"]] = weather[number]['ws2m'] #풍속
         rain[weather[number]["obsname"]] = weather[number]['rn'] #강수량
-    weather_result = {'temp':temp, 'wind':wind, 'humanity':humanity, 'rain':rain}
+    weather_result = {'temp':temp, 'wind':wind, 'humanity':humanity, 'rain':rain, 'location':address()}
+    print(weather_result)
     return render(request, 'hiking.html', weather_result)
 
 # Create your views here.

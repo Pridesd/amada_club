@@ -44,6 +44,7 @@ jQuery(window).scroll(function() {
     }
 }); 
 
+// select 제어
 // function addressKindChange(e) {
 //     var seoul = ["강남", "홍대", "영등포", "여의도"];
 //     var sejong = [];
@@ -73,3 +74,4 @@ jQuery(window).scroll(function() {
 //         target.appendChild(opt);
 //     }   
 // }
+
