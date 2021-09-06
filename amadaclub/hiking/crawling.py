@@ -33,7 +33,6 @@ def address():
             addressDict.append(content)
 
     addressJson = json.dumps(addressDict, ensure_ascii=False)
-    print(addressJson)
     return addressJson
 
 # 지역
