@@ -1,0 +1,22 @@
+.map_wrap{
+    border:1px solid black;
+    border-radius: 1rem;
+    background-color: rgb(238, 238, 238);
+    padding: 0.5rem;
+}
+.map_info{
+
+}
+.map_title{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.map_body{
+
+}
+.map_desc{
+
+}
+.map_ellipsis{
+    font-size: 0.7rem;
+}
