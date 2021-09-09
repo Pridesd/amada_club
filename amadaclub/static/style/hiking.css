@@ -19,7 +19,7 @@
 }
 
 
-.hiking_news{
+.hiking_national{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,8 +27,10 @@
     width: 100%;
     height: 30rem;
     background-color: salmon;
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: white;
+}
+.hiking_national__mountain{
 }
 
 .hiking_weather{

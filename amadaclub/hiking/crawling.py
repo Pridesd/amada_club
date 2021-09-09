@@ -4,6 +4,7 @@ from amadaclub.settings import *
 import time
 import datetime
 import json
+from bs4 import BeautifulSoup
 
 
 def mountain_weather():
@@ -54,3 +55,7 @@ def address():
 # 15 : 경상남도
 # 16 : 경상북도
 # 17 : 제주도
+
+def national_park():
+    source = requests.get("https://www.knps.or.kr/portal/main/contents.do?menuNo=7020071")
+    soup = BeautifulSoup(source.content, "html.parser")
