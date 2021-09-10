@@ -26,11 +26,25 @@
     align-items: center;
     width: 100%;
     height: 30rem;
-    background-color: salmon;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: white;
+    overflow: auto;
 }
-.hiking_national__mountain{
+
+.hiking_national__mountain a{
+    margin-left: rem;
+    display: inline-block;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+}
+
+.hiking_national__mountain a:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.national_park span{
+    display: inline-block;   
 }
 
 .hiking_weather{
@@ -82,15 +96,14 @@
     }
     
     
-    .hiking_news{
+    .hiking_national{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 30rem;
-        background-color: salmon;
-        font-size: 2rem;
+        font-size: 1rem;
         color: white;
     }
     
