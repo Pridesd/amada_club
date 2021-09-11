@@ -1,6 +1,7 @@
 {% extends 'base.html'%}
     <!-- 컨텐츠 화면 -->
     {%block content%}
+    {% if user.is_authenticated %}
         <div class="main_photo main_envirment">
         </div>
         <main class="main_contents">
@@ -10,5 +11,8 @@
                 <a class="button button_nega" href="{% url 'co_delete' post.id %}">네</a>
                 <a class="button" href="{% url 'co_detail' post.id %}">아니요</a>
             </h1>
-            
+    
+        {% else %}
+            <div class="title"> 접근 권한이 없습니다. </div>
+        {% endif %}
     {%endblock%}
