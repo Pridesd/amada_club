@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 
 def mountain_weather():
-    keyValue = env('MOUTAIN_API_KEY')
+    keyValue = "Sbm9yrINqaCxfdYNObTFKr7SXlDFRcxcZLYyHFNbIwo%3D"
     now = time.strftime('%Y%m%d%H')
     if datetime.datetime.now().second > 40:
         now += '30'
