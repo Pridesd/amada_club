@@ -106,7 +106,9 @@
         font-size: 1rem;
         color: white;
     }
-    
+    .hiking_national__mountain a{
+        padding: 1rem;
+    }
     .hiking_weather{
         display: flex;
         flex-direction: column;
