@@ -67,9 +67,7 @@
 @media screen and (max-width: 768px) {
     /* 모바일에 사용될 스트일 시트를 여기에 작성합니다. */
     .intro_body{
-        background-image: url('../img/히말라야 전경.JPG');
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-image: url('../img/himalayas.jpg');
     }
     .intro{
         display: flex;
