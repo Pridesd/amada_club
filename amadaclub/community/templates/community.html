@@ -7,9 +7,9 @@
         <main class="main_contents">
             <div class="title">Community</div>
             <div class="subtitle korean">산행정보를 공유하세요!</div>
-            {% if user.is_authenticated %}
+            <!-- {% if user.is_authenticated %} -->
                 <div class="new_post korean"><a href="{% url 'co_new' %}">게시글 작성</a></div>
-            {% endif %}
+            <!-- {% endif %} -->
             <div class="post_image">
                 <div class="container">
                     {% for post in post_list %}
