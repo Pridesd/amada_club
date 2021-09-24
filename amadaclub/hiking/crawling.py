@@ -1,6 +1,6 @@
 import requests
 import xmltodict
-from amadaclub.settings import *
+from amadaclub.settings.local import *
 import time
 import datetime
 import json
