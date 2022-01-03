@@ -107,7 +107,7 @@
         color: white;
     }
     .hiking_national__mountain a{
-        padding: 1rem;
+        padding: 1rem 0.3rem;
     }
     .hiking_weather{
         display: flex;

@@ -170,3 +170,4 @@ cython_debug/
 .env
 db.sqlite3
 Dockerfile
+nginx.conf

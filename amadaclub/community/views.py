@@ -3,6 +3,23 @@ from django.http import request
 from django.utils import timezone
 from .models import Community
 from django.contrib import messages
+from PIL import Image 
+
+def resize(image, width):
+    img = Image.open(image)
+
+    src_width, src_height = img.size
+    src_ratio = float(src_height) / float(src_width)
+    dst_height = round(src_ratio * width)
+
+    img = img.resize((width, dst_height))
+    img.save(image.name, 'PNG')
+    image.file = img
+    
+    # 이게 없으면 attribute error 발생
+    image.file.name = image.name
+
+    return image
 
 def community(request):
     post_list = Community.objects.all().order_by('-id')
@@ -20,8 +37,9 @@ def co_create(request):
     new_post.title = request.POST['title']
     new_post.content = request.POST['content']
     new_post.date = timezone.now()
-    if (request.FILES.get('image') is not None) :
+    if (request.FILES.get('image') is not None) :      
         new_post.image = request.FILES['image']
+        # image = resize(image, 700)
     else:
         messages.error(request, '%사진을 첨부하세요.%')
         return render(request, 'co_new.html')
